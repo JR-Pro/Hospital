@@ -2,21 +2,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { EspecialidaddesComponent } from './especialidaddes/especialidaddes.component';
+import { HomeComponent } from './home/home.component';
 import { Medico } from './medico';
 import { MedicoComponent } from './medico/medico.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { RegistrarMedicoComponent } from './registrar-medico/registrar-medico.component';
 
 const routes: Routes = [
-  {path: 'list', component: MedicoComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'listMedic', component: MedicoComponent},
   {path: '',redirectTo: 'list',pathMatch: 'full'},
-  {path: 'lista', component: PacientesComponent},
+  {path: 'listPacie', component: PacientesComponent},
   {path: '',redirectTo: 'lista',pathMatch: 'full'},
-  {path: 'lis', component: EspecialidaddesComponent},
+  {path: 'listEspeci', component: EspecialidaddesComponent},
   {path: '',redirectTo: 'lis',pathMatch: 'full'},
-  {path: 'list1', component: ConsultaComponent},
+  {path: 'listConsu', component: ConsultaComponent},
   {path: '',redirectTo: 'list1',pathMatch: 'full'},
-  {path: 'registrar-medico', component: RegistrarMedicoComponent}
+  {path: 'registrar-medico', component: RegistrarMedicoComponent},
 ];
 
 @NgModule({
