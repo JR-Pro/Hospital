@@ -1,0 +1,17 @@
+<h2>Especialidad</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+           
+        </tr>
+    </thead>
+    <tbody class="table-dark">
+        <tr *ngFor = "let Especialidad of lis">
+            <td>{{Especialidad.idEspecialidad}}</td>
+            <td>{{Especialidad.nombres}}</td>
+           
+        </tr>
+    </tbody>
+</table>

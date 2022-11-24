@@ -1,0 +1,21 @@
+<h2>Pacientes</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>CPM</th>
+            <th>Foto</th>
+        </tr>
+    </thead>
+    <tbody class="table-dark">
+        <tr *ngFor = "let Pacientes of lista">
+            <td>{{Pacientes.idPacientes}}</td>
+            <td>{{Pacientes.nombres}}</td>
+            <td>{{Pacientes.apellidos}}</td>
+            <td>{{Pacientes.CPM}}</td>
+            <td>{{Pacientes.fotoURL}}</td>
+        </tr>
+    </tbody>
+</table>

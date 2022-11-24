@@ -1,0 +1,25 @@
+<h2>Medicos</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Paciente</th>
+            <th>Medico</th>
+            <th>Especialidad</th>
+            <th>No.Consulta</th>
+            <th>Fecha</th>
+            <th>Detalle</th>
+        </tr>
+    </thead>
+    <tbody class="table-dark">
+        <tr *ngFor = "let Consulta of list1">
+            <td>{{Consulta.idConsulta}}</td>
+            <td>{{Consulta.paciente}}</td>
+            <td>{{Consulta.medico}}</td>
+            <td>{{Consulta.especialidad}}</td>
+            <td>{{Consulta.numConsultorio}}</td>
+            <td>{{Consulta.fecha}}</td>
+            <td>{{Consulta.detalleConsulta}}</td>
+        </tr>
+    </tbody>
+</table>
