@@ -19,8 +19,5 @@ export class PacienteService {
 //Este método nos sirve para añadir a los pacientes
   registrarP(paciente:Paciente): Observable<Object>{
     return this.httClient.post(this.baseURL, paciente);
-  }
-  
-
-  //'' ``
+  }  
 }

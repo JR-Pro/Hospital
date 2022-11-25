@@ -19,7 +19,7 @@ export class MedicoComponent implements OnInit {
   }
 //Este método sirve cómo un routerlink, para añadir a alguna ruta que quiera ir
   irACrear(){
-    this.router.navigate(['/añadirP']);
+    this.router.navigate(['/anadirm']);
   }
 
 

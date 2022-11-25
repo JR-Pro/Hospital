@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Consulta } from '../consulta';
 import { ConsultaService } from '../servicie/consulta/consulta.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-consulta',
   templateUrl: './consulta.component.html',
@@ -10,10 +11,14 @@ export class ConsultaComponent implements OnInit {
 
   list1: Consulta[];
 
-  constructor(private consultaService:ConsultaService) { }
+  constructor(private consultaService:ConsultaService, private router:Router) { }
 
   ngOnInit(): void {
     this.obtener();
+  }
+  
+  irACrear(){
+    this.router.navigate(['/anadire']);
   }
 
   private obtener(){

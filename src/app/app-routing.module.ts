@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { MedicoComponent } from './medico/medico.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { RegistroPComponent } from './pacientes/registro-p/registro-p.component';
+import { RegistroMComponent } from './medico/registro-m/registro-m.component';
+import { RegistroEComponent } from './especialidaddes/registro-e/registro-e.component';
+import { RegistroCComponent } from './consulta/registro-c/registro-c.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,6 +18,9 @@ const routes: Routes = [
   {path: 'listConsu', component: ConsultaComponent},
   {path: '',redirectTo: 'home',pathMatch: 'full'},
   {path: 'añadirP', component: RegistroPComponent},
+  {path: 'anadirm', component: RegistroMComponent },
+  {path: 'anadire', component: RegistroEComponent},
+  { path: 'anadirc', component: RegistroCComponent }
 ];
 
 @NgModule({

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { Medico} from 'src/app/medico';
+import { MedicosService } from 'src/app/servicie/medicos/medicos.service';
+
 
 @Component({
   selector: 'app-registro-m',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroMComponent implements OnInit {
 
-  constructor() { }
+  Medico : Medico = new Medico();
+
+  constructor(private medicoService:MedicosService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  irAaListaMedicos(){
+    this.router.navigate(['listMedic'])
+  }
+
+  onSubmit(){
+    this.medicoService.registrarm(this.Medico).subscribe(dato=>{
+
+      this.irAaListaMedicos();
+    })
+  }
 }
+
