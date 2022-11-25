@@ -1,11 +1,13 @@
-<h2>Medicos</h2>
-<table class="table table-striped">
-    <thead class="table-dark">
+<div class="py-0">
+    <button type="button" (click)="irACrear()" class="btn btn-success">Añadir</button>
+</div>
+<h2 class="text-center">Medicos</h2>
+<table class="table table-striped mx-auto">
+    <thead class="table-dark mx-auto">
         <tr>
             <th>Id</th>
             <th>Nombre</th>
             <th>Apellido</th>
-            <th>CPM</th>
             <th>Foto</th>
         </tr>
     </thead>
@@ -16,6 +18,8 @@
             <td>{{Medicos.apellidos}}</td>
             <td>{{Medicos.CPM}}</td>
             <td>{{Medicos.fotoURL}}</td>
+            <td> <img src="./assets/Medicos.png" alt="" height="35" width="35"> </td>
         </tr>
     </tbody>
 </table>
+

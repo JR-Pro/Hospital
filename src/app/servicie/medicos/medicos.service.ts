@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs";
+import {  Observable } from "rxjs";
 import { Medico } from 'src/app/medico';
 
 @Injectable({
@@ -10,14 +10,16 @@ export class MedicosService {
 
   private baseURL = "http://localhost:8080/medicos"
 
-  constructor( private httClient: HttpClient) { }
+  constructor( private httpClient: HttpClient) { }
 
   Obtenerlist(): Observable<Medico[]>{
-    return this.httClient.get<Medico[]>(this.baseURL)
+    return this.httpClient.get<Medico[]>(this.baseURL)
   }
+
+ 
   
   registrar(medico:Medico): Observable<Object>{
-    return this.httClient.post((this.baseURL), medico);
+    return this.httpClient.post((this.baseURL), medico);
   }
   
 }

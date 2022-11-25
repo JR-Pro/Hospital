@@ -11,9 +11,9 @@ export class EspecialidadService {
   private baseURL = "http://localhost:8080/especialidades"
 
   constructor( private httClient: HttpClient) { }
-
+//Obtener la lista de las espcecialidades
   Obtenerlist(): Observable<Especialidad[]>{
-    return this.httClient.get<Especialidad[]>(this.baseURL)
+    return this.httClient.get<Especialidad[]>(`${this.baseURL}`);
   }
   
   registrar(especialidad:Especialidad): Observable<Object>{

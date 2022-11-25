@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pacientes } from '../pacientes';
+import { Router } from '@angular/router';
+import { Paciente, Pacientes } from '../pacientes';
 import { PacienteService } from '../servicie/paciente.service';
 
 @Component({
@@ -9,16 +10,22 @@ import { PacienteService } from '../servicie/paciente.service';
 })
 export class PacientesComponent implements OnInit {
 
-  lista: Pacientes[];
+  lista: Paciente[];
 
-  constructor(private pacienteService:PacienteService) { }
+  constructor(private pacienteService:PacienteService, private router: Router) { }
 
   ngOnInit(): void {
     this.obtener();
   }
+  
+  irACrear(){
+    this.router.navigate(['/añadirP']);
+  }
 
+  //Función para poder ver los datos y mostrarlos(Tabla pacientes) en la clase obtener 
   private obtener(){
     this.pacienteService.Obtenerlist().subscribe(dato => {
+      console.log(dato);
       this.lista = dato;
     });
   }

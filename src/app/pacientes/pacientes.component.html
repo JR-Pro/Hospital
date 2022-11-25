@@ -1,12 +1,15 @@
-<h2>Pacientes</h2>
+<div class="py-0">
+    <button type="button" (click)="irACrear()" class="btn btn-success">Añadir</button>
+</div>
+<h2 class="text-center">Pacientes</h2>
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
             <th>Id</th>
             <th>Nombre</th>
             <th>Apellido</th>
-            <th>CPM</th>
-            <th>Foto</th>
+            <th>DNI</th>
+            <th>Mail</th>
         </tr>
     </thead>
     <tbody class="table-dark">
@@ -14,8 +17,8 @@
             <td>{{Pacientes.idPacientes}}</td>
             <td>{{Pacientes.nombres}}</td>
             <td>{{Pacientes.apellidos}}</td>
-            <td>{{Pacientes.CPM}}</td>
-            <td>{{Pacientes.fotoURL}}</td>
+            <td>{{Pacientes.dni}}</td>
+            <td>{{Pacientes.mail}}</td>
         </tr>
     </tbody>
 </table>

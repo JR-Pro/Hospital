@@ -7,11 +7,17 @@
            
         </tr>
     </thead>
-    <tbody class="table-dark">
+    <tbody>
+        <tr *ngFor="let Especialidad of lis">
+            <td>{{Especialidad.idEspecialidad}}</td>
+            <td>{{Especialidad.nombres}}</td>
+        </tr>
+    </tbody>
+    <!--<tbody class="table-dark">
         <tr *ngFor = "let Especialidad of lis">
             <td>{{Especialidad.idEspecialidad}}</td>
             <td>{{Especialidad.nombres}}</td>
            
         </tr>
     </tbody>
-</table>
+</table>-->

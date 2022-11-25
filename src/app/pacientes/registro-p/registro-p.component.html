@@ -1,0 +1,68 @@
+<div class=" py-3  border border-dark rounded text-center col-md-6 offset-md-3 ">
+    <form (ngSubmit)="onSubmit()">
+        <div class="col py-1 form-group">
+            <input type="text" class="form-control" 
+            placeholder="First name" 
+            aria-label="First name" for="nombres" 
+            id="Nombre"
+            name="Nombre"
+            [(ngModel)] = "Paciente.nombres" >
+        </div>
+            
+        <div class="col form-group">
+            <input type="text" class="form-control" 
+            placeholder="Last name" aria-label="Last name"
+            id="Apellido"
+            name="Apellido"
+            [(ngModel)] = "Paciente.apellidos" >
+        </div>
+        
+        <div class="col form-group">
+            <input type="number" class="form-control" 
+            placeholder="DNI" aria-label="Last name"
+            id="Apellido"
+            name="dni"
+            [(ngModel)] = "Paciente.dni" >
+        </div>
+
+        <div class="col form-group">
+            <input type="text" class="form-control" 
+            placeholder="dirección" aria-label="Last name"
+            id="direccion"
+            name="direccion"
+            [(ngModel)] = "Paciente.direccion">
+        </div>
+        
+        <div class="col form-group">
+            <input type="tel" class="form-control" 
+            placeholder="Telefono" aria-label="Last name"
+            id="telefono"
+            name="telefono"
+            [(ngModel)] = "Paciente.telefono" >
+        </div>
+
+        <div class="col form-group">
+            <input type="email" class="form-control" 
+            placeholder="mail" aria-label="Last name"
+            id="mail"
+            name="mail"
+            [(ngModel)] = "Paciente.mail">
+        </div>
+        
+        <div class=" py-2">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>
+
+
+<!-- 
+{
+       
+    "nombres": "Josue",
+    "apellidos": "Perez",
+    "dni": "20729014",
+    "direccion": "zona 5",
+    "telefono": "411229280",
+    "email": "josuedp1691@gmaill.com"
+} -->
