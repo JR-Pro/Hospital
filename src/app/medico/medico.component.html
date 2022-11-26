@@ -18,11 +18,11 @@
             <td>{{Medicos.idMedico}}</td>
             <td>{{Medicos.nombres}}</td>
             <td>{{Medicos.apellidos}}</td>
-            <td>{{Medicos.cpm}}</td>
+            <td>{{Medicos.cmp}}</td>
             <td> <img src="./assets/medico.png" alt="" height="35" width="35"> </td>
             <td>
-                <button class="btn btn-info" >Editar</button>
-                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                <button class="btn btn-info" (click)="editarM(Medicos)">Editar</button>
+                <button class="btn btn-danger" (click)="eliminarM(Medicos)" style="margin-left: 10px;">Eliminar</button>
             </td>
         </tr>
     </tbody>

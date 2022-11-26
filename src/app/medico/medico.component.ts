@@ -29,4 +29,26 @@ export class MedicoComponent implements OnInit {
       this.list = dato;
     });
   }
+
+  editarMedico(medico: Medico){
+
+    this.medicoService.medico = medico;
+    this.router.navigate(['/añadirP/editar']);
+    //console.log(`Aqui Elimino a ${paciente.nombres}`);
+
+  }
+
+  eliminarM(medico: Medico){
+    this.medicoService.eliminarM(medico.idMedico).subscribe(data => {
+     this.obtener();
+    })
+   }
+
+   editarM(medico: Medico){
+
+    this.medicoService.medico = medico;
+    this.router.navigate(['/anadirm/editar']);
+    //console.log(`Aqui Elimino a ${paciente.nombres}`);
+
+  }
 }

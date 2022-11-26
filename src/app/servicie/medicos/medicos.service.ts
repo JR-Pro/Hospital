@@ -9,6 +9,7 @@ import { Medico } from 'src/app/medico';
 export class MedicosService {
 
   private baseURL = "http://localhost:8080/medicos"
+  medico : Medico = new Medico ();
 
   constructor( private httpClient: HttpClient) { }
   //Este método nos sirve para obtener a los pacientes
@@ -19,5 +20,12 @@ export class MedicosService {
   registrarm(medico:Medico): Observable<Object>{
     return this.httpClient.post(this.baseURL, medico);
   }
-  
+
+  eliminarM(id:number):Observable<object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+  actualizarM(medico:Medico): Observable<Object>{
+    return this.httpClient.put(this.baseURL, medico);
+  }
+
 }

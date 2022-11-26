@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'añadirP', component: RegistroPComponent},
   {path: 'añadirP/:dato', component: RegistroPComponent},
   {path: 'anadirm', component: RegistroMComponent },
+  {path: 'anadirm/:dato', component: RegistroMComponent},
   {path: 'anadire', component: RegistroEComponent},
   { path: 'anadirc', component:RegistroCComponent }
 ];

@@ -12,9 +12,9 @@ export class RegistroPComponent implements OnInit {
 
 
   paciente : Paciente = new Paciente();
-
+//Variable que se usan para las validaciones
   private editar: boolean = false;
-  
+
   hayError: boolean = false;
   errorMessage : string = '';
 
@@ -32,17 +32,12 @@ export class RegistroPComponent implements OnInit {
       else{
         this.editar = false;
       }
-      
+
     })
     //console.log('anadir p');
   }
-  // guardarP(){
-  //   this.pacienteService.registrarP(this.paciente).subscribe(dato =>{
-  //     console.log(dato);
-  //     //this.irALaListaPacientes();
-  //   },error=> console.log(error));
-  // }
-  
+
+
   irALaListaPacientes(){
     this.router.navigate(['/listPacie']);
   }
@@ -64,10 +59,8 @@ export class RegistroPComponent implements OnInit {
       }
     }
 
-  
-   
   }
-
+//Validaciones
   private validador() : boolean{
     this.hayError = false;
     this.errorMessage = '';
@@ -77,38 +70,38 @@ export class RegistroPComponent implements OnInit {
       if(!this.paciente.nombres){
         this.hayError = true;
       this.errorMessage = 'Información incompleta';
-  
+
       return false
       }
       if (this.paciente.nombres.length< 3 || this.paciente.nombres.trim() =='' ) {
         this.hayError = true;
         this.errorMessage = 'Nombre no valido o campo en blanco';
-  
-  
+
+
         return false;
       }
       else if (this.paciente.apellidos.length< 3 || this.paciente.apellidos.trim() =='') {
         this.hayError = true;
         this.errorMessage = 'Apellido no valido o campo en blanco';
-  
+
         return false;
       }
       else if (this.paciente.dni.toString().length< 8 || this.paciente.dni.toString() =='') {
         this.hayError = true;
         this.errorMessage = 'DNI no valido, se necesitan 8 digitos  o campo en blanco';
-  
+
         return false;
       }
       else if (this.paciente.direccion.length< 3 || this.paciente.direccion.trim() =='') {
         this.hayError = true;
         this.errorMessage = 'Direccion no valido o campo en blanco';
-  
+
         return false;
       }
       else if (this.paciente.telefono.toString().length< 9 || this.paciente.telefono.toString() =='') {
         this.hayError = true;
         this.errorMessage = 'telefono no valido, se necesitan 9 digitos o campo en blanco';
-  
+
         return false;
       }
       this.errorMessage = '';
@@ -118,7 +111,7 @@ export class RegistroPComponent implements OnInit {
       this.errorMessage = 'Información incompleta';
       return false;
     }
-   
+
   }
 
 }

@@ -1,38 +1,38 @@
 <div class=" py-3  border border-dark rounded text-center col-md-6 offset-md-3 ">
     <form (ngSubmit)="onSubmit()">
         <div class="col py-1 form-group">
-            <input type="text" class="form-control" 
-            placeholder="First name" 
-            aria-label="First name" for="nombres" 
+            <input type="text" class="form-control"
+            placeholder="First name"
+            aria-label="First name" for="nombres"
             id="Nombre"
             name="Nombre"
             [(ngModel)] = "Medico.nombres" >
         </div>
-            
+
         <div class="col form-group">
-            <input type="text" class="form-control" 
+            <input type="text" class="form-control"
             placeholder="Last name" aria-label="Last name"
             id="Apellido"
             name="Apellido"
             [(ngModel)] = "Medico.apellidos" >
         </div>
-        
+
         <div class="col form-group">
-            <input type="number" class="form-control" 
+            <input type="number" class="form-control"
             placeholder="CPM" aria-label="Last name"
             id="Apellido"
             name="cpm"
-            [(ngModel)] = "Medico.cpm" >
+            [(ngModel)] = "Medico.cmp" >
         </div>
 
         <div class="col form-group">
-            <input type="text" class="form-control" 
+            <input type="text" class="form-control"
             placeholder="dirección" aria-label="Last name"
             id="foto"
             name="foto"
-            [(ngModel)] = "Medico.fotoURL">
+            [(ngModel)] = "Medico.foto">
         </div>
-        
+
         <div class=" py-2">
                 <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
