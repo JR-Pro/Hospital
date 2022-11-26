@@ -15,7 +15,7 @@ export class ConsultaService {
     return this.httClient.get<Consulta[]>(this.baseURL)
   }
   
-  registrar(consulta:Consulta): Observable<Object>{
+  registrarC(consulta:Consulta): Observable<Object>{
     return this.httClient.post((this.baseURL), consulta);
   }
 }

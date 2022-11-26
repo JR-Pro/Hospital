@@ -18,14 +18,14 @@ export class RegistroMComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  irAaListaMedicos(){
+  irAListaMedicos(){
     this.router.navigate(['listMedic'])
   }
 
   onSubmit(){
     this.medicoService.registrarm(this.Medico).subscribe(dato=>{
 
-      this.irAaListaMedicos();
+      this.irAListaMedicos();
     })
   }
 }

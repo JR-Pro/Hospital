@@ -3,12 +3,14 @@
 </div>
 <h2 class="text-center">Medicos</h2>
 <table class="table table-striped mx-auto">
-    <thead class="table-dark mx-auto">
+    <thead class="table-dark text">
         <tr>
             <th>Id</th>
             <th>Nombre</th>
             <th>Apellido</th>
+            <th>CPM</th>
             <th>Foto</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody class="table-dark">
@@ -17,8 +19,11 @@
             <td>{{Medicos.nombres}}</td>
             <td>{{Medicos.apellidos}}</td>
             <td>{{Medicos.cpm}}</td>
-            <td>{{Medicos.fotoURL}}</td>
-            <td> <img src="./assets/Medicos.png" alt="" height="35" width="35"> </td>
+            <td> <img src="./assets/medico.png" alt="" height="35" width="35"> </td>
+            <td>
+                <button class="btn btn-info" >Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
         </tr>
     </tbody>
 </table>

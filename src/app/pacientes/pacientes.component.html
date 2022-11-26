@@ -10,15 +10,20 @@
             <th>Apellido</th>
             <th>DNI</th>
             <th>Mail</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody class="table-dark">
-        <tr *ngFor = "let Pacientes of lista">
-            <td>{{Pacientes.idPacientes}}</td>
-            <td>{{Pacientes.nombres}}</td>
-            <td>{{Pacientes.apellidos}}</td>
-            <td>{{Pacientes.dni}}</td>
-            <td>{{Pacientes.mail}}</td>
+        <tr *ngFor = "let paciente of lista">
+            <td>{{paciente.idPaciente}}</td>
+            <td>{{paciente.nombres}}</td>
+            <td>{{paciente.apellidos}}</td>
+            <td>{{paciente.dni}}</td>
+            <td>{{paciente.email}}</td>
+            <td>
+                <button class="btn btn-info" (click)="editarPaciente(paciente)" >Editar</button>
+                <button class="btn btn-danger"  (click)="eliminarPaciente(paciente)"  style="margin-left: 10px;">Eliminar</button>
+            </td>
         </tr>
     </tbody>
 </table>

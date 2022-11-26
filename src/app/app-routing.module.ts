@@ -18,9 +18,10 @@ const routes: Routes = [
   {path: 'listConsu', component: ConsultaComponent},
   {path: '',redirectTo: 'home',pathMatch: 'full'},
   {path: 'añadirP', component: RegistroPComponent},
+  {path: 'añadirP/:dato', component: RegistroPComponent},
   {path: 'anadirm', component: RegistroMComponent },
   {path: 'anadire', component: RegistroEComponent},
-  { path: 'anadirc', component: RegistroCComponent }
+  { path: 'anadirc', component:RegistroCComponent }
 ];
 
 @NgModule({

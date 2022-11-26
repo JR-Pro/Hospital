@@ -18,11 +18,12 @@ export class ConsultaComponent implements OnInit {
   }
   
   irACrear(){
-    this.router.navigate(['/anadire']);
+    this.router.navigate(['/anadirc']);
   }
 
   private obtener(){
     this.consultaService.Obtenerlist().subscribe(dato => {
+      console.log(dato);
       this.list1 = dato;
     });
   }

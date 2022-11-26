@@ -1,7 +1,7 @@
 <div class="py-0">
     <button type="button" (click)="irACrear()" class="btn btn-success">Añadir</button>
 </div>
-<h2>Medicos</h2>
+<h2 class="text-center">Medicos</h2>
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
@@ -11,18 +11,23 @@
             <th>Especialidad</th>
             <th>No.Consulta</th>
             <th>Fecha</th>
-            <th>Detalle</th>
+            <!-- <th>Detalle</th> -->
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody class="table-dark">
-        <tr *ngFor = "let Consulta of list1">
-            <td>{{Consulta.idConsulta}}</td>
-            <td>{{Consulta.paciente}}</td>
-            <td>{{Consulta.medico}}</td>
-            <td>{{Consulta.especialidad}}</td>
-            <td>{{Consulta.numConsultorio}}</td>
-            <td>{{Consulta.fecha}}</td>
-            <td>{{Consulta.detalleConsulta}}</td>
+        <tr *ngFor = "let consulta of list1">
+            <td>{{consulta.idConsulta}}</td>
+            <td>{{consulta.paciente.nombres}}</td>
+            <td>{{consulta.medico.nombres}}</td>
+            <td>{{consulta.especialidad.nombre}}</td>
+            <td>{{consulta.numConsultorio}}</td>
+            <td>{{consulta.fecha}}</td>
+            <!-- <td>{{consulta.detalleConsulta}}</td> -->
+            <td>
+                <button class="btn btn-info" >Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
         </tr>
     </tbody>
 </table>

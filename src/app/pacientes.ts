@@ -6,11 +6,11 @@ export class Pacientes {
     fotoURL: string;
 }
 export class Paciente {
-    idPacientes: number;
+    idPaciente: number;
     nombres: string;
     apellidos: string;
     dni : number;
     direccion : string;
     telefono: number;
-    mail: string;
+    email: string;
 }

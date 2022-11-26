@@ -2,11 +2,11 @@
     <form (ngSubmit)="onSubmit()">
         <div class="col py-1 form-group">
             <input type="text" class="form-control" 
-            placeholder="First name" 
+            placeholder="Nombres" 
             aria-label="First name" for="nombres" 
             id="Nombre"
             name="Nombre"
-            [(ngModel)] = "Paciente.nombres" >
+            [(ngModel)] = "paciente.nombres" >
         </div>
             
         <div class="col form-group">
@@ -14,15 +14,15 @@
             placeholder="Last name" aria-label="Last name"
             id="Apellido"
             name="Apellido"
-            [(ngModel)] = "Paciente.apellidos" >
+            [(ngModel)] = "paciente.apellidos" >
         </div>
         
         <div class="col form-group">
             <input type="number" class="form-control" 
             placeholder="DNI" aria-label="Last name"
-            id="Apellido"
+            id="dni"
             name="dni"
-            [(ngModel)] = "Paciente.dni" >
+            [(ngModel)] = "paciente.dni" >
         </div>
 
         <div class="col form-group">
@@ -30,7 +30,7 @@
             placeholder="dirección" aria-label="Last name"
             id="direccion"
             name="direccion"
-            [(ngModel)] = "Paciente.direccion">
+            [(ngModel)] = "paciente.direccion">
         </div>
         
         <div class="col form-group">
@@ -38,7 +38,7 @@
             placeholder="Telefono" aria-label="Last name"
             id="telefono"
             name="telefono"
-            [(ngModel)] = "Paciente.telefono" >
+            [(ngModel)] = "paciente.telefono" >
         </div>
 
         <div class="col form-group">
@@ -46,11 +46,15 @@
             placeholder="mail" aria-label="Last name"
             id="mail"
             name="mail"
-            [(ngModel)] = "Paciente.mail">
+            [(ngModel)] = "paciente.email">
         </div>
         
         <div class=" py-2">
                 <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+        <div *ngIf="hayError">
+            <span > <h4  class="text-danger">{{errorMessage}} </h4></span>
         </div>
     </form>
 </div>

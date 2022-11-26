@@ -1,19 +1,23 @@
 <div class="py-0">
     <button type="button" (click)="irACrear()" class="btn btn-success">Añadir</button>
 </div>
-<h2>Especialidad</h2>
+<h2 class="text-center">Especialidad</h2>
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
             <th>Id</th>
             <th>Nombre</th>
-           
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let Especialidad of lis">
             <td>{{Especialidad.idEspecialidad}}</td>
-            <td>{{Especialidad.nombres}}</td>
+            <td>{{Especialidad.nombre}}</td>
+            <td>
+                <button class="btn btn-info" >Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
         </tr>
     </tbody>
     <!--<tbody class="table-dark">

@@ -15,6 +15,12 @@ import { RegistroPComponent } from './pacientes/registro-p/registro-p.component'
 import { RegistroMComponent } from './medico/registro-m/registro-m.component';
 import { RegistroEComponent } from './especialidaddes/registro-e/registro-e.component';
 import { RegistroCComponent } from './consulta/registro-c/registro-c.component';
+import { EditarCComponent } from './consulta/editar-c/editar-c.component';
+import { EditarPComponent } from './pacientes/editar-p/editar-p.component';
+import { EditarMComponent } from './medico/editar-m/editar-m.component';
+import { EditarEComponent } from './especialidaddes/editar-e/editar-e.component';
+
+
 
 
 
@@ -31,6 +37,10 @@ import { RegistroCComponent } from './consulta/registro-c/registro-c.component';
     RegistroMComponent,
     RegistroEComponent,
     RegistroCComponent,
+    EditarCComponent,
+    EditarPComponent,
+    EditarMComponent,
+    EditarEComponent,
   ],
   imports: [
     BrowserModule,

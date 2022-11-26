@@ -1,1 +1,24 @@
-<p>registro-e works!</p>
+<div class=" py-3  border border-dark rounded text-center col-md-6 offset-md-3 ">
+    <form (ngSubmit)="onSubmit()">
+        <div class="col py-1 form-group">
+            <input type="text" class="form-control" 
+            placeholder="Nombres" 
+            aria-label="First name" for="nombres" 
+            id="Nombre"
+            name="Nombre"
+            [(ngModel)] = "especialidad.idEspecialidad" >
+        </div>
+            
+        <div class="col form-group">
+            <input type="text" class="form-control" 
+            placeholder="Last name" aria-label="Last name"
+            id="Apellido"
+            name="Apellido"f
+            [(ngModel)] = "especialidad.nombre" >
+        </div>
+                
+        <div class=" py-2">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</div>
